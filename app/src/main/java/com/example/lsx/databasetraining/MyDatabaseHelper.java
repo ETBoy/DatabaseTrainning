@@ -12,8 +12,11 @@ import android.widget.Toast;
  * Created by lsx on 2016/7/24.
  */
 public class MyDatabaseHelper extends SQLiteOpenHelper {
-    public static final String CREATE_BOOK="create table book("
-            +"id integer primary key autoincrement,author text,price real,pages integer,name text)";
+    public static final String CREATE_BOOK="create table "+ BookStoreContact.BookContact.TABLE_NAME+"("
+            + BookStoreContact.BookContact._ID+" integer primary key autoincrement,"+ BookStoreContact.BookContact.COLUMN_NAME_AUTHOR+
+    " text," +
+            BookStoreContact.BookContact.COLUMN_NAME_PRICE+" real," +
+            BookStoreContact.BookContact.COLUMN_NAME_PAGES+" integer,name text)";
     public static final String CREATE_CATEGORY="Create table Category(id integer primary key autoincrement," +
             "category_name text," +
             "category_code integer)";
